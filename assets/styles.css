@@ -1,0 +1,247 @@
+html {
+    background-color: #2C104A;
+    @import url('https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700&display=swap');
+    font-family: 'Khula', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 50px;
+    padding-top: 20px;
+}
+
+.bar a {
+    text-decoration: none;
+    font-weight:600;
+    color: white;
+    margin-left: 20px;
+}
+.bar :hover {
+    color: #FFF8B2
+}
+button {
+    padding: 15px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    background-color: #308AD3;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    transition-duration: 0.5s;
+}
+.main {
+    background: url("illustration.svg")left 100px bottom 50px ,url("background.svg") right 200px bottom ;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    min-width: auto;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    z-index: -1;
+    transition: all 0.5s linear;
+
+}
+.middle {
+    margin:130px 80px;
+    color: white;
+    font-size: 32px;
+    z-index: 1;
+    transition: all 0.5s linear;
+}
+.middle p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 30px;
+}
+
+.buttons {
+    margin-top: 60px;
+}
+
+.trans {
+    background-color: transparent;
+    border: white 1px solid;
+}
+
+button:hover {
+    background-color: aliceblue;
+    color: #308AD3;
+}
+
+@media only screen and (max-width: 1400px) {
+    .main {
+        background-size: 90%;
+        left: 180px;
+        bottom: inherit;
+    }
+    .middle {
+        margin-bottom: 20px;
+        font-size: 29px;
+    }
+}
+@media only screen and (max-width: 768px) and (min-width: 485px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        height: 150px;
+     }
+    nav button {
+        margin: 0 auto;
+        margin-top: 40px;
+     }
+     button {
+         padding: 14px 50px;
+         font-size: 18px;
+     }
+    .bar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        top: -100%;
+        left: 0%;
+        padding: 20px 0;
+        background-color: #2C104A;
+        border-top: black 1px solid;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0 2px 27px black ;
+        transition: 0.5s ease-in-out ;
+     }
+     .bar a {
+        color:aliceblue;
+        font-size: 25px;
+        font-weight: lighter;
+     }
+     .bar.active {
+        top: 90px;
+     }
+    .menu { 
+        margin: 0 10px 20px 300px ;
+        display: block;
+        width: 35px;
+        height: 4px;
+        cursor: pointer;
+    }
+    .menu span {
+        display: block;
+        width: 100%;
+        height:100%;
+        border-radius: 5px;
+        margin: 5px auto;
+        background-color:aliceblue;
+        -webkit-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+     }
+     .menu.active span:nth-child(1) {
+        transform: rotate(45deg) translateY(6px);
+        width: 45px;
+    }
+    .menu.active span:nth-child(2) {
+        transform: rotate(-45deg) translateY(-6px);
+        width: 45px;
+    }
+    .menu.active span:nth-child(3) {
+        width: 0%;
+        opacity: 0;
+        transition: 0.1s;
+    }
+     .main {
+         background-size: 100%;
+        left: -1px;
+        bottom: -50px;
+     }
+     .middle {
+         margin: 60px 80px;
+     }
+
+}
+@media screen and (max-width: 480px) {
+     nav {
+        align-items: flex-start;
+        height: 150px;
+        margin-top: 30px;
+     }
+     nav button {
+        margin: 0 auto;
+        margin-top: 30px;
+     }
+     button {
+         padding: 14px 50px;
+         font-size: 18px;
+     }
+     .bar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        height: 50% ;
+        top: -100%;
+        left: 0;
+        background-color: #2C104A;
+        border-top: black 1px solid;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0 2px 27px black ;
+        transition: 0.5s ease-in-out ;
+     }
+     .bar a {
+        color:aliceblue;
+        font-size: 20px;
+        font-weight: lighter;
+     }
+     .bar.active {
+        right: 10px;
+        top: 100px;
+     }
+    .menu { 
+        display: block;
+        width: 35px;
+        height: 4px;
+        cursor: pointer;
+    }
+    .menu span {
+        display: block;
+        width: 100%;
+        height:100%;
+        border-radius: 5px;
+        margin: 5px auto;
+        background-color:aliceblue;
+        -webkit-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+     }
+    .menu.active span:nth-child(1) {
+        transform: rotate(45deg) translateY(6px);
+        width: 45px;
+    }
+    .menu.active span:nth-child(2) {
+        transform: rotate(-45deg) translateY(-6px);
+        width: 45px;
+    }
+    .menu.active span:nth-child(3) {
+        width: 0%;
+        opacity: 0;
+        transition: 0.1s;
+    }
+    .middle {
+        background: url("/Group\ 56.svg") center;
+        font-size: 24px;
+        font-weight: lighter;
+        margin-top: 40px; 
+    }
+    .trans {
+        margin-top: 20px;
+    }
+    .main {
+        display: none;
+    }
+}
